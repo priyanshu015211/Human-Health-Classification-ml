@@ -64,7 +64,7 @@ To predict human activity based on sensor data collected from mobile health moni
 
 ## Confusion Matrix Insights
 
-### KNN
+![KNN Confusion Matrix](knn_confusion_matrix.png)
 
 * Strong diagonal dominance → high correct classification
 * Excellent performance on:
@@ -78,6 +78,8 @@ To predict human activity based on sensor data collected from mobile health moni
   * Dynamic activities (jumping, climbing stairs)
 
 ### Logistic Regression
+
+![LR Confusion Matrix](lr_confusion_matrix.png)
 
 * Weak diagonal dominance → high misclassification
 * Struggles with:
