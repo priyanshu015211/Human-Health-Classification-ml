@@ -1,5 +1,12 @@
 # Human Behavior Classification using Mobile Health Data
 
+Achieved **97.11% accuracy** using KNN on real-world wearable sensor data.
+
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![ML](https://img.shields.io/badge/Machine%20Learning-Project-green)
+
+---
+
 ## Overview
 
 This project focuses on classifying human activities using wearable sensor data. Multiple machine learning models were implemented and compared to identify the most effective approach for activity recognition.
@@ -30,7 +37,7 @@ To predict human activity based on sensor data collected from mobile health moni
 ### Data Preprocessing
 
 * Cleaned dataset and handled inconsistencies
-* Applied feature scaling (critical for KNN performance)
+* Applied **StandardScaler for feature normalization** (critical for KNN performance)
 * Split data into training and testing sets
 
 ---
@@ -50,8 +57,8 @@ To predict human activity based on sensor data collected from mobile health moni
 ## Key Results
 
 * **Best Model: KNN (k=1)** with **97.11% accuracy**
-* Logistic Regression performed poorly due to linear limitations
-* Decision Tree showed moderate performance but less accuracy than KNN
+* Logistic Regression underperformed due to linear limitations
+* Decision Tree showed moderate performance but lower accuracy than KNN
 
 ---
 
@@ -111,7 +118,7 @@ To predict human activity based on sensor data collected from mobile health moni
 ## How to Run
 
 ```bash
-git clone https://github.com/your-username/human-behavior-classification.git
+git clone https://github.com/priyanshu015211/human-behavior-classification.git
 cd human-behavior-classification
 pip install -r requirements.txt
 jupyter notebook
@@ -127,6 +134,15 @@ jupyter notebook
 ├── requirements.txt
 └── dataset/
 ```
+
+---
+
+## Highlights
+
+* Achieved **97%+ accuracy** on multi-class classification
+* Compared linear vs non-linear models
+* Performed hyperparameter tuning (K optimization)
+* Analyzed model behavior using confusion matrix
 
 ---
 
