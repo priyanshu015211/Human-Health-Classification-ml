@@ -4,6 +4,8 @@ Achieved **97.11% accuracy** using KNN on real-world wearable sensor data.
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue)
 ![ML](https://img.shields.io/badge/Machine%20Learning-Project-green)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
 ---
 
@@ -22,13 +24,13 @@ This project focuses on classifying human activities using wearable sensor data.
   * Gyroscope data
   * Physiological signals
 
-These features are used to classify various human activities.
+> ⚠️ Dataset is not included in this repository due to size constraints. Please download it from the link above.
 
 ---
 
 ## Problem Statement
 
-To predict human activity based on sensor data collected from mobile health monitoring systems.
+Predict human activity based on sensor data collected from mobile health monitoring systems.
 
 ---
 
@@ -38,7 +40,7 @@ To predict human activity based on sensor data collected from mobile health moni
 
 * Cleaned dataset and handled inconsistencies
 * Applied **StandardScaler for feature normalization** (critical for KNN performance)
-* Split data into training and testing sets
+* Performed train-test split (`test_size=0.2`, `random_state=42`, stratified)
 
 ---
 
@@ -62,7 +64,9 @@ To predict human activity based on sensor data collected from mobile health moni
 
 ---
 
-## Confusion Matrix Insights
+## Confusion Matrix
+
+### KNN (Best Model)
 
 ![KNN Confusion Matrix](knn_confusion_matrix.png)
 
@@ -76,6 +80,8 @@ To predict human activity based on sensor data collected from mobile health moni
 
   * Walking vs Lying down
   * Dynamic activities (jumping, climbing stairs)
+
+---
 
 ### Logistic Regression
 
@@ -123,7 +129,18 @@ To predict human activity based on sensor data collected from mobile health moni
 git clone https://github.com/priyanshu015211/human-behavior-classification.git
 cd human-behavior-classification
 pip install -r requirements.txt
+```
+
+### Run Notebook
+
+```bash
 jupyter notebook
+```
+
+### Run Python Script
+
+```bash
+python human_behavior_classification.py
 ```
 
 ---
@@ -132,9 +149,12 @@ jupyter notebook
 
 ```
 ├── human_behavior_classification.ipynb
+├── human_behavior_classification.py
 ├── README.md
 ├── requirements.txt
-└── dataset/
+├── knn_confusion_matrix.png
+├── lr_confusion_matrix.png
+└── dataset/   (download separately)
 ```
 
 ---
@@ -144,7 +164,7 @@ jupyter notebook
 * Achieved **97%+ accuracy** on multi-class classification
 * Compared linear vs non-linear models
 * Performed hyperparameter tuning (K optimization)
-* Analyzed model behavior using confusion matrix
+* Analyzed model performance using confusion matrices
 
 ---
 
@@ -153,13 +173,13 @@ jupyter notebook
 * Importance of feature scaling in ML models
 * Model selection based on data complexity
 * Hyperparameter tuning (K optimization in KNN)
-* Comparing multiple models using evaluation metrics
+* Evaluating models using multiple metrics
 
 ---
 
 ## Future Improvements
 
-* Cross-validation for robust evaluation
+* Cross-validation for more robust evaluation
 * Ensemble models (Random Forest, XGBoost)
 * Deep learning approaches (LSTM for time-series data)
 * Real-time activity prediction system
